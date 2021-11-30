@@ -90,7 +90,7 @@ findErrorScript() {
 CheckPermission()
 {
 	# Only root can run this
-	id | grep "uid=0" >/dev/null
+	id | grep "uid=0" > /dev/null
 	if [ $? != "0" ]; then
 		echo "ERROR: This script must be run as root";
 		echo "";
