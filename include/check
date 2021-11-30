@@ -90,12 +90,12 @@ findErrorScript() {
 CheckPermission()
 {
 	# Only root can run this
-	id | grep "uid=0" > /dev/null
-	if [ $? != "0" ]; then
-		echo "ERROR: This script must be run as root";
-		echo "";
-		exit 1;
-	fi
+	# id | grep "uid=0" > /dev/null
+	# if [ $? != "0" ]; then
+	# 	echo "ERROR: This script must be run as root";
+	# 	echo "";
+	# 	exit 1;
+	# fi
 
 	# Stop!! If /root/.chroot does not exit
 	if [ ! -f /root/.chroot ]; then
